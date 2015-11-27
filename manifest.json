@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "Chrome",
+	"description": "A badass Chrome extension in the making!",
+	"version": "1.0",
+
+	"icons": {
+		"16": "images/icon.png",
+		"48": "images/icon.png",
+		"128": "images/icon.png"
+	},
+
+	"background": { 
+		"scripts": ["js/background.js"]
+	},
+
+	"browser_action": {
+		"default_icon": "images/icon.png",
+		"default_title": "Chrome"
+	},
+
+	"permissions": [
+		"tabs",
+		"http://*/*", 
+		"https://*/*",
+		"https://ajax.googleapis.com/"
+	]
+}

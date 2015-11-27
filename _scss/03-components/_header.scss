@@ -1,0 +1,121 @@
+/* Header
+   ========================================================================== */
+
+/* ============ Layout ============ */
+
+
+.global-header {
+
+    /* Quick Links */
+
+    &__quick-links {
+        @include span(12 of 12);
+    }
+
+    /* Global Header Left */
+
+    &__left {
+        @include span(6 of 12);
+    }
+
+    /* Global Header Right */
+
+    &__right {
+        @include span(6 of 12 last);
+    }
+}
+
+/* ============ Styling ============ */
+
+.global-header {
+
+    /* Quick Links */
+
+    &__quick-links {
+        text-align: right;
+        background-color: $base-quick-links-bg-color;
+
+        ul {
+            list-style: none;
+            padding: 12px 0;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                margin-left: 20px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                a {
+                    color: #b2b2b2;
+                    font-size: 11px;
+                    font-family: $font-bold;
+
+                    &:hover {
+                        color: $font-white;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Global Header Left */
+
+    &__left {
+
+        .logo {
+
+            img {
+                width: auto;
+                height: 80px;
+            }
+        }
+    }
+
+    /* Global Header Right */
+
+    &__right {
+        text-align: right;
+
+        /* Main Menu */
+
+        .main-nav {
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    line-height: 20px;
+                    display: inline-block;
+                    padding: 30px 15px;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    a {
+                        color: #777;
+                        font-size: 16px;
+                        font-family: $font-bold;
+
+                        &:hover {
+                            color: $base-link-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Mobile Main Menu */
+
+        #mobile-toggle {
+            color: $font-black;
+            @include rem(font-size, 32px);
+            @include rem(line-height, 63px);
+        }
+    }
+}

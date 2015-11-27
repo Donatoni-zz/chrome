@@ -1,0 +1,48 @@
+/* Header
+   ========================================================================== */
+
+/* ============ Layout ============ */
+
+
+.table {
+    @include span(12 of 12);
+
+    &__heading {
+
+    }
+
+    &__row {
+
+    }
+
+    &__cell {
+
+    }
+}
+
+/* ============ Styling ============ */
+
+.table {
+    display: table;
+    font-size: 12px;
+    margin-bottom: 30px;
+
+    &__heading {
+        font-family: $font-bold;
+        display: table-header-group;
+    }
+
+    &__row {
+        display: table-row;
+    }
+
+    &__cell {
+        display: table-cell;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0px 10px 10px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+}

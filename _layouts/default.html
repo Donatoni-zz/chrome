@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    {% include doc_head.html %}
+
+    <body class="{% if page.class %}{{ page.class }}{% else %} {% endif %}">
+        <header class="global-header">
+            {% include header.html %}
+        </header>
+
+        <main class="container">
+            {{ content | safe }}
+        </main>
+
+        <footer class="global-footer">
+            {% include footer.html %}
+        </footer>
+
+        {% include scripts-bottom.html %}
+    </body>
+</html>
