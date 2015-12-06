@@ -6,27 +6,3 @@
 /* Font Awesome */
 
 @fa-font-path:   "../../vendor/Font-Awesome/font";
-
-@font-face {
-    font-family: "clan-light";
-    src: url('/fonts/clan-book.eot');
-    src: url('/fonts/clan-book.woff') format('woff');
-    font-weight: lighter;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "clan-regular";
-    src: url('/fonts/clan-news.eot');
-    src: url('/fonts/clan-news.woff') format('woff');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "clan-bold";
-    src: url('/fonts/clan-medium.eot');
-    src: url('/fonts/clan-medium.woff') format('woff');
-    font-weight: bold;
-    font-style: normal
-}

@@ -25,6 +25,10 @@
     }
 }
 
+.my-instashow {
+    @include span(12 of 12);
+}
+
 /* ============ Styling ============ */
 
 .global-header {

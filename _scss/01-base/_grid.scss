@@ -44,7 +44,7 @@ $desktop: min-width 769px;
 /* ====== Container Settings ====== */
 
 .container {
-    @include container;
+    @include span(12 of 12);
 }
 
 .wrapper {

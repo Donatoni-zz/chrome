@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
-	"name": "Chrome",
-	"description": "A badass Chrome extension in the making!",
+	"name": "Instagram",
+	"description": "",
 	"version": "1.0",
 
 	"icons": {
@@ -16,13 +16,15 @@
 
 	"browser_action": {
 		"default_icon": "images/icon.png",
-		"default_title": "Chrome"
+		"default_title": "Instagram"
 	},
 
 	"permissions": [
 		"tabs",
 		"http://*/*", 
 		"https://*/*",
-		"https://ajax.googleapis.com/"
-	]
+		"https://api.instagram.com/"
+	],
+	
+	"content_security_policy": "script-src 'self' https://api.instagram.com; object-src 'self'"
 }
