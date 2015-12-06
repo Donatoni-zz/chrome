@@ -3,6 +3,18 @@
     {% include doc_head.html %}
 
     <body class="{% if page.class %}{{ page.class }}{% else %} {% endif %}">
-        {{ content | safe }}
+        <header class="global-header">
+            {% include header.html %}
+        </header>
+
+        <main>
+            {{ content | safe }}
+        </main>
+
+        <footer class="global-footer">
+            {% include footer.html %}
+        </footer>
+        
+        {% include scripts-bottom.html %}
     </body>
 </html>

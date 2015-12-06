@@ -21,10 +21,14 @@
 
 	"permissions": [
 		"tabs",
+		"storage",
+		"cookies",
 		"http://*/*", 
 		"https://*/*",
 		"https://api.instagram.com/"
 	],
-	
+
+	"options_page": "index.html",
 	"content_security_policy": "script-src 'self' https://api.instagram.com; object-src 'self'"
+
 }
