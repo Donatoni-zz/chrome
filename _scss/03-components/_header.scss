@@ -10,6 +10,18 @@
 
     &__quick-links {
         @include span(12 of 12);
+
+        /* Quick Links Left */
+
+        .test-output {
+            @include span(6 of 12);
+        }
+
+        /* Quick Links Right */
+
+        .user-info {
+            @include span(6 of 12 last);
+        }
     }
 
     /* Global Header Left */
@@ -36,8 +48,8 @@
     /* Quick Links */
 
     &__quick-links {
-        text-align: right;
         background-color: $base-quick-links-bg-color;
+        padding: 15px 0;
 
         ul {
             list-style: none;
@@ -62,6 +74,18 @@
                     }
                 }
             }
+        }
+
+        /* Quick Links Left */
+
+        .test-output {
+            color: $font-white;
+        }
+
+        /* Quick Links Right */
+
+        .user-info {
+            text-align: right;
         }
     }
 

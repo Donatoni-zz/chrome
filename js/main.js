@@ -1,44 +1,64 @@
-var handle = "delatoni";
-
-// Checks to see if a users handle has been set or not and updates variable is so.
-$(function() {
-    chrome.storage.sync.get('user', function(handleName) {
-        if(handleName.user) {
-            handle = (handleName.user);
-        }
-    });
-});
-
 // Settings for Instagram plugin
 $(function() {
-    $('.my-instashow').instaShow({
-        accessToken: '47389409.745c638.11ecb4d9ac2f4a63ad1ff32d3ab2e34f',
-        source: '@' + handle,
-        width: '100%',
-        height: 'auto',
-        direction: 'vertical',
-        columns: '4',
-        rows: '10',
-        limit: '40',
-        arrowsControl: false,
-        scrollControl: false,
-        dragControl: false,
-        scrollbar: false,
-        lang: 'en',
-        popupInfo: 'username, instagramLink, likesCounter, commentsCounter, location, passedTime, description, comments'
-    });
-});
 
-// 
-$(function() {
+    // Checks to see if a users handle has been set or not and updates variable is so.
+    chrome.storage.sync.get('user', function(handleName) {
+        var handle = "samjage";
+
+        if(handleName.user) {
+            var handle = (handleName.user);
+        }
+
+        $('.my-instashow').instaShow({
+            accessToken: '47389409.745c638.11ecb4d9ac2f4a63ad1ff32d3ab2e34f',
+            source: '@' + handle,
+            width: '100%',
+            height: 'auto',
+            direction: 'vertical',
+            columns: '6',
+            rows: '10',
+            limit: '80',
+            arrowsControl: false,
+            scrollControl: false,
+            dragControl: false,
+            scrollbar: false,
+            lang: 'en',
+            popupInfo: 'username, instagramLink, likesCounter, commentsCounter, location, passedTime, description, comments'
+        });
+    });
+
+    // Set handle and clears field.
     $('.user-info__submit').click(function() {
-        var newHandle = $('.user-info__handle').val;
+        var newHandle = $('.user-info__handle').val();
 
-        chrome.storage.sync.set({'user' : newHandle});
-        $('.global-header__left').text(newHandle);
-        $('.user-info__handle').val('');
+        chrome.storage.sync.set({'user' : newHandle}, function() {
+            $('.user-info__handle').val('');
+        });
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 function saveOptions() {
